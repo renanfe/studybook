@@ -1,0 +1,59 @@
+@import '../styles/global.scss';
+
+article {
+    border-bottom: 1px solid rgba($secondary, 0.5) !important;
+    margin: 10px 10px 10px 10px !important;
+}
+
+article:last-child {
+    border-bottom: 0px solid rgba($color: red, $alpha: 0.5) !important;
+}
+
+.post-title {
+    font-weight: bold;
+    text-align: justify;
+    color:$primary;
+}
+
+.post-subtitle {
+    color:$primary;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.post-date {
+    font-style: italic;
+    size: 10px;
+    font-size: 13px;
+}
+
+.post-main-text {
+    padding-top: 20px;
+    line-height: 30px;
+    text-align: justify;
+    p::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+.post-content {
+    line-height: 30px;
+    text-align: justify;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    p {
+        margin-bottom: 20px;
+    }
+    p::first-letter {
+        text-transform: capitalize;
+    }
+    margin: 0px 0px 100px 0px;
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 40px 0px 40px 0px !important;
+}

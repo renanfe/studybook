@@ -1,0 +1,15 @@
+@import "../styles/global.scss";
+
+.contact-menu  li {
+  padding: 0px 10px 0px 10px;
+  display: inline;
+  border-right: 2px solid $secondary;
+}
+
+.contact-menu  li:first-child {
+  padding-left: 0px;
+}
+
+.contact-menu  li:last-child {
+  border-right: 0px;
+}

@@ -1,0 +1,13 @@
+@import '../styles/global.scss';
+
+main {
+  max-width: 1000px;
+  margin: 0px 15px 0px 15px;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    max-width: 1000px;
+    margin: 0px auto 0px auto;    
+  }
+}

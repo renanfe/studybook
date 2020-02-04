@@ -1,0 +1,47 @@
+@import "../styles/global.scss";
+
+header {
+  background-color: $primary;
+  color: $secondary;
+  padding: 20px !important;
+
+  .main-header {
+    display: flex !important;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 1000px;
+
+    .title-header {
+      font-size: 30px;
+      font-weight: bold;
+      flex: 1 0 auto;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+
+    nav {
+      display: flex;
+      flex-flow: row-reverse nowrap;
+      flex: 1 0 auto;
+      ul {
+        list-style: none;
+        li {
+          display: inline;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title-header {
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
