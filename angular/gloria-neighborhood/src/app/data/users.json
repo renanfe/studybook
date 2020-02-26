@@ -1,0 +1,14 @@
+[
+    {
+        "username": "renan",
+        "password": "123456",
+        "name": "renan felipe teixeira",
+        "address": {
+            "street": "avenida paulista",
+            "city": "são Paulo",
+            "state": "SP",
+            "country": "brazil"
+        },
+        "picture": ""
+    }
+]

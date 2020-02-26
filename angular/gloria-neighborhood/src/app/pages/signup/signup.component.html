@@ -1,0 +1,54 @@
+<section>
+  <h2>Sign Up</h2>
+  <div class="form-panel">
+
+    <form [formGroup]="userForm" (ngSubmit)="create(userForm.value)">
+
+      <mat-form-field>
+        <mat-label>name</mat-label>
+        <input matInput name="name" formControlName="name" autofocus="true" />
+      </mat-form-field>
+      <span class="alert"
+        *ngIf="!userForm.controls['name'].valid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)">
+
+        <span *ngIf="userForm.controls['name'].errors.required">Name is required</span>
+      </span>
+
+      <mat-form-field>
+        <mat-label>e-mail</mat-label>
+        <input matInput type="email" formControlName="email" />
+      </mat-form-field>
+      <span class="alert"
+        *ngIf="!userForm.controls['email'].valid && (userForm.controls['email'].dirty || userForm.controls['email'].touched)">
+        <span *ngIf="userForm.controls['email'].errors.required">E-mail is required</span>
+      </span>
+
+      <mat-form-field>
+        <mat-label>username</mat-label>
+        <input matInput formControlName="username" />
+      </mat-form-field>
+      <span class="alert"
+        *ngIf="!userForm.controls['username'].valid && (userForm.controls['username'].dirty || userForm.controls['username'].touched)">
+        <span *ngIf="userForm.controls['username'].errors.required">Username is required</span>
+      </span>
+
+      <mat-form-field>
+        <mat-label>password</mat-label>
+        <input matInput type="password" formControlName="password" />
+      </mat-form-field>
+      <span class="alert"
+        *ngIf="!userForm.controls['password'].valid && (userForm.controls['password'].dirty || userForm.controls['password'].touched)">
+        <span *ngIf="userForm.controls['password'].errors.required">Password is required</span>
+      </span>
+      <mat-form-field>
+        <mat-label>confirm password</mat-label>
+        <input #confirm matInput type="password" />
+      </mat-form-field>
+      <span class="alert" *ngIf="userForm.controls['password'].value !== confirm.value">Password is not
+        equal</span>
+      <br>
+      <button mat-stroked-button type="submit" [disabled]="userForm.invalid">Create</button>
+
+    </form>
+  </div>
+</section>

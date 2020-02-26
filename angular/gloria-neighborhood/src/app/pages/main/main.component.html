@@ -1,0 +1,27 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" color="primary" [opened]="width >= 576 ? true : false" #sidenav>
+        <mat-toolbar color="primary">
+            <span>Glória Neighborhood</span>
+            <button class="menu-button" *ngIf="sidenav.opened" mat-icon-button (click)="sidenav.close()">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+        </mat-toolbar>
+        <nav>
+            <ul>
+                <a [routerLink]="[ '/home' ]" routerLinkActive="link-active-side"><li><mat-icon>home</mat-icon> Home</li></a>
+                <a [routerLink]="[ '/signup' ]" routerLinkActive="link-active-side"><li><mat-icon>add</mat-icon> Sign Up</li></a>
+            </ul>
+        </nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <button class="menu-button" *ngIf="!sidenav.opened" mat-icon-button (click)="sidenav.open()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>{{title}}</span>
+        </mat-toolbar>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

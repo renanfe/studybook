@@ -1,0 +1,46 @@
+@import "../../../styles.scss";
+
+main {
+  padding: 0px 26px 0px 26px;
+}
+
+.mat-sidenav-content {
+  height: 100vh;
+}
+
+nav {
+  ul {
+    padding: 0px;
+    li {
+      padding: 10px 0px 10px 20px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+    mat-icon {
+      padding-right: 10px;
+    }
+  }
+}
+
+.link-active {
+  font-size: 18px !important;
+  border-bottom: 2px solid white !important;
+}
+
+.link-active-side {
+  li {
+    border-right: 5px solid white;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  mat-sidenav-content {
+    background-color: white;
+    border-radius: 30px 0px 0px 30px;
+    margin-left: 0px;
+  }
+
+}

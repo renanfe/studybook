@@ -1,0 +1,27 @@
+version: '3'
+services:
+    mongo:
+        image: mongo
+        ports: 
+            - "27017:27017"
+        container_name: mongo
+        networks: 
+            - gloria
+    node1:
+        build:
+            dockerfile: DockerFile
+            context: .
+        image: renanfe/gloria
+        container_name: gloria-1
+        ports:
+            - "8080:8080"
+        depends_on:
+            - "mongo"
+        environment:
+            - MONGODB_PATH=mongodb://mongo:27017/gloria
+            - PORT=8080
+        networks: 
+            - gloria
+networks:
+    gloria:
+        driver: bridge

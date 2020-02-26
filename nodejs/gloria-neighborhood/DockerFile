@@ -1,0 +1,8 @@
+FROM node:lts-alpine
+MAINTAINER RENAN FELIPE TEIXEIRA
+WORKDIR /usr/src/app
+COPY ./ ./
+RUN npm install
+EXPOSE 8080
+ENV PORT 8080
+ENTRYPOINT npm run start
